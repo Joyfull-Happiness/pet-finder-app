@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <h1>Let's find your puuuurfect pet!</h1>
+    <form>
+      <div class="name">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Asia" required />
+      </div>
+
+      <div class="email">
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="user_email"
+          placeholder="Asia@gmail.com"
+          required
+        />
+      </div>
+
+      <div class="zipcode">
+        <label for="zipcode">Zip Code: </label>
+        <input
+          type="text"
+          id="zipcode"
+          name="zipcode"
+          placeholder="98742"
+          required
+          maxlength="5"
+        />
+      </div>
+
+      <div class="typeOfPet">
+        <label for="typeOfPet">Type of Pet:</label>
+        <select id="typeOfPet" name="typeOfPet" required>
+          <option value="">--Select One--</option>
+          <option value="Cat">Cat</option>
+          <option value="Dog">Dog</option>
+          <option value="Bird">Bird</option>
+          <option value="Rabbit">Rabbit</option>
+        </select>
+      </div>
+
+      <button type="submit">Get Your Icecream</button>
+    </form>
+
+    <script src="api.js"></script>
+  </body>
+</html>

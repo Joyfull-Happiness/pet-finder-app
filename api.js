@@ -3,7 +3,6 @@ const apiData = document.querySelector("#result");
 // const zipCode = document.querySelector(".zipCode");
 // const petType = document.querySelector(".typeOfPet");
 const cardContainer = document.querySelector(".card-container");
-const card = document.querySelector(".card");
 
 let animalType;
 
@@ -51,16 +50,25 @@ function getAdoptablePets(formData) {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        // showData(zipCode, petType); pass through data from API NOT data object
+        showData(data.animals);
+        // pass through data from API NOT data object
       })
       .catch((error) => console.error("Error:", error));
   });
 }
 // use dot and bracket notation to find data in API. like in horoscopes
 
-// const showData = (zipCode, petType) => {
-//   for (let item of formData.typeOfPet  ) {
-// 			cardContainer.innerHTML += `<div class="card"> <h3>${item.title}</h3>
-// 		<h2>${item.author}</h2>
-// 		<h3>${item.rank}</h3>
-// 		<img src="${item.book_image}" alt="${item.description}"/></div>`;
+const showData = (animals) => {
+  cardContainer.innerHTML = "";
+  for (let item of animals) {
+    cardContainer.innerHTML += `
+      <div class="card"> 
+      
+     <img src="${item.photos[0]?.small}" alt="${item.description}"/>
+     <h3>${item.name}</h3>
+		<p>${item.breeds.primary}</p>
+		<p>${item.colors.primary}</p>
+     <p>${item.description}</p> </div>
+		`;
+  }
+};

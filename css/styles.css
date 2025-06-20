@@ -8,10 +8,10 @@ html {
 }
 
 body {
-  font-family: sans-serif;
   background: linear-gradient(135deg, #b9d9dd, #274289);
   color: #2e3f52;
   height: 100vh;
+ font-family: "Poppins", sans-serif;
 }
 heading {
   text-align: center;
@@ -65,10 +65,14 @@ button:hover {
 }
 
 img {
-  height: 15%;
-  width: 0 auto;
+ 
   align-items: center;
   margin: 0 auto;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-bottom: 4px solid #f1948a;
+  overflow: clip;
 }
 
 .card-container {
@@ -86,6 +90,8 @@ img {
   border-radius: 1em;
   overflow: hidden;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  transition: transform 0.25s ease; 
+  box-shadow 0.25s ease;
   gap: 1rem;
+  display: block;
 }
